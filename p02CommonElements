@@ -1,0 +1,20 @@
+package L3Arrays.exe;
+
+import java.util.Scanner;
+
+public class p02CommonElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String[] symbol1 = scanner.nextLine().split(" ");
+        String[] symbol2 = scanner.nextLine().split(" ");
+
+        for (String secondWord : symbol2){
+            for (String firstWord : symbol1){
+                if (secondWord.equals(firstWord)){
+                    System.out.print(firstWord + " ");
+                }
+            }
+        }
+    }
+}
