@@ -1,0 +1,38 @@
+package L3Arrays.exe;
+
+import java.util.Scanner;
+
+public class p03ZigZagArrays {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int[]array1 = new int[n];
+        int[]array2 = new int[n];
+
+        for (int row = 0; row < n; row++){
+            String input = scanner.nextLine();
+
+            int firstNum = Integer.parseInt(input.split(" ")[0]);
+            int secondNum = Integer.parseInt(input.split(" ")[1]);
+
+            if ((row + 1) % 2 == 0){
+                array1[row] = secondNum;
+                array2[row] = firstNum;
+            }else{
+                array1[row] = firstNum;
+                array2[row] = secondNum;
+                }
+            }
+
+            for (int number:array1) {
+                System.out.print(number + " ");
+            }
+            System.out.println();
+            for (int number:array2){
+                System.out.print(number + " ");
+
+        }
+    }
+}
